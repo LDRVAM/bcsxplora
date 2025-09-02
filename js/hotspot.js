@@ -1,15 +1,15 @@
 function init() {
     console.log("Init function running");
-    const close = document.querySelector('.close');
-    close.addEventListener('mouseenter', () => {
-        console.log("click")
-        history.back();
-    });
-    const closeG = document.querySelector('.closeG');
-    closeG.addEventListener('click', () => {
-        console.log("click")
-        history.back();
-    });
+    // const close = document.querySelector('.close');
+    // close.addEventListener('mouseenter', () => {
+    //     console.log("click")
+    //     history.back();
+    // });
+    // const closeG = document.querySelector('.closeG');
+    // closeG.addEventListener('click', () => {
+    //     console.log("click")
+    //     history.back();
+    // });
 
     // Register 'spot' component
     AFRAME.registerComponent('spot', {
@@ -20,7 +20,7 @@ function init() {
         init: function () {
             const el = this.el;
             const data = this.data;
-            const imgSrc = el.classList.contains('atras') ? '#atras' : el.classList.contains('adelante') ? '#adelante' : null;
+            const imgSrc = el.classList.contains('atras') ? '#atras' : el.classList.contains('adelante') ? '#adelante' :  el.classList.contains('salir') ? '#salir': null;
 
             el.setAttribute('src', imgSrc);
             el.setAttribute('look-at', '#cam');

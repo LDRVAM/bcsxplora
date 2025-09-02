@@ -41,6 +41,7 @@
             <!--Recursos extra-->
             <video id="atras" autoplay loop muted src="images/direction.webm" alt="hotspot"></video>
             <img id="close1" src="images/close1.png" alt="close1">
+            <img id="salir" src="images/puerta.png" alt="salir">
             <img id="siguiente" src="images/sig.png" alt="sig">
             <video id="adelante" autoplay loop muted src="images/adelante.webm" alt="adelante"></video>
             <video id="video" autoplay loop muted src="images/try.webm"></video>
@@ -205,16 +206,18 @@
             </a-entity>
             
             <a-entity id="group-point5-balandra" scale="0 0 0">
-                <a-image src="images/puerta.png" id="puertaSalida" position="-4.5 0.5 5.5" visible="true" width="1.5" height="1.5" event-set__click="_event: click; color: #00FF00" rotation="0 -50 0" visibilidad="openImageId: puertaSalida; imageId: confirmacion; closeId: cancelarPlane"></a-image>
+                <!-- <a-image src="images/puerta.png" id="puertaSalida" position="-4.5 0.5 5.5" visible="true" width="1.5" height="1.5" event-set__click="_event: click; color: #00FF00" rotation="0 -50 0" visibilidad="openImageId: puertaSalida; imageId: confirmacion; closeId: cancelarPlane"></a-image>
                 <a-entity id="confirmacion" position="-8.0 0.5 10.5" rotation="0 -210 0" visible="false">
                     <a-plane position="0 0.5 0" rotation="0 0 0" geometry="width: 10; height: 6" material="color: black; opacity: 0.7"></a-plane>
                     <a-plane position="-2.25 0.2 6" id="cancelarPlane" rotation="0 0 0" geometry="width: 2; height: 0.8" material="color: red; opacity: 0.7"></a-plane>
-                    <a-plane position="0.70 0.2 6" class="close interactivo" rotation="0 0 0" geometry="width: 2; height: 0.8" material="color: green; opacity: 0.7"></a-plane>
+                    <a-image position="0.70 0.2 6" spot="linkto:#pointBal1;spotgroup:group-point1-balandra" class="atras" src="#atras" rotation="0 0 0" geometry="width: 2; height: 0.8" material="color: green; opacity: 0.7"></a-image>
                     <a-text value="Cancelar" position="-2.2 0.45 7" align="center" color="white" width="4.5" text="wrapCount: 25; baseline: top; negate: false;font:./lato-font-main/Lato-Regular-msdf.json; fontImage: ./lato-font-main/Lato-Regular-msdf.png" ></a-text>
                     <a-text value="Aceptar"  position="0.375 0.45 7" align="center" color="white" width="4.5" text="wrapCount: 25; baseline: top; negate: false; font:./lato-font-main/Lato-Regular-msdf.json; fontImage: ./lato-font-main/Lato-Regular-msdf.png" ></a-text>
                     <a-text value="Confirma si deseas salir de este paseo" position="-0.55 2 4" align="center" color="white" width="6.5" text="wrapCount: 25; baseline: top; negate: false; font:./lato-font-main/Lato-Regular-msdf.json; fontImage: ./lato-font-main/Lato-Regular-msdf.png" ></a-text>
-                </a-entity>
-
+                </a-entity> 
+                -->
+                <a-image class="salir" spot="linkto:#pointBal1;spotgroup:group-point1-balandra" position="-4.5 0.5 5.5" rotation="0 -50 0" src="#salir" material="opacity:0.8" geometry="width:1.5; height:1.5"></a-image>
+                
                 <a-image class="atras" spot="linkto:#pointBal4;spotgroup:group-point4-balandra" position="-1 0.3 10" rotation="60 20 90" src="#atras" material="opacity:0.8" geometry="width:1.5; height:1.8"></a-image>
                 <a-video src="#video" id="op9" position="0.2 4 0.5" rotation="90.000  60.000 0.000" material="opacity:0.9" geometry="width: 0.7; height: 0.7" visible="true" visibilidad="openImageId: op9; imageId: tar9; closeId: clo9"></a-video>
                 <a-entity id="tar9" position="-2 7 12" rotation="20 -180 0" visible="false">
