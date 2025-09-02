@@ -42,6 +42,9 @@ function init() {
                         const test = document.querySelector('#testimonial');
                         test.currentTime = 0; 
                         test.pause();
+                        const inmer = document.querySelector('#inmersion');
+                        inmer.currentTime = 0; 
+                        inmer.pause();
                     } else if(id === "conchalito") {
                         cambiarTextoConAudio(data.linkto.replace('#', ''));
                     }
