@@ -1,9 +1,10 @@
 [
+   
     {
-        "lat": 24.3206,
-        "lng": -110.3192,
-        "name": "Manglar Balandra",
-        "bg": "balandra-cover.jpg",
-        "link": "balandra.html"
+        "lat": 23.6200,
+        "lng": -109.6100,
+        "name": "El Surgidero",
+        "bg": "surgidero-cover.jpg",
+        "link": "surgidero.html"
     }
 ]
