@@ -46,7 +46,7 @@ function init() {
                         inmer.currentTime = 0; 
                         inmer.pause();
                     } else if(id === "conchalito") {
-                        //cambiarTextoConAudio(data.linkto.replace('#', ''));
+                        cambiarTextoConAudio(data.linkto.replace('#', ''));
                     }
                 }
                 
@@ -195,28 +195,15 @@ AFRAME.registerComponent('carousel', {
 //     texto.setAttribute('value', scenes[sceneId]);
 // }
 
-// function cambiarTextoConAudio(sceneId) {
-//     const scenes = {
-//         'point1': 'Escenario 1',
-//         'point2': 'Escenario 2',
-//         'point3': 'Escenario 3',
-//         'point4': 'Escenario 4',
-//         'point5': 'Escenario 5',
-//         'point6': 'Escenario 6',
-//         'point7': 'Escenario 7',
-//         'point8': 'Escenario 8'
-//     };
+function cambiarTextoConAudio(sceneId) {
 
-//     const texto = document.querySelector('#scene-value');
-//     texto.setAttribute('value', scenes[sceneId]);
-
-//     const audioControl = document.querySelector('#audio-control');
-//     if (sceneId === 'point4') {
-//         audioControl.components.sound.playSound();
-//     } else {
-//         audioControl.components.sound.stopSound();
-//     }
-// }
+    const audioControl = document.querySelector('#audio-control');
+    if (sceneId === 'point4') {
+        audioControl.components.sound.playSound();
+    } else {
+        audioControl.components.sound.stopSound();
+    }
+}
 
 window.addEventListener('load', function () {
     init();
