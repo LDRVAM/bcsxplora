@@ -1,63 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./information/mapbox-gl.css" rel="stylesheet">
-        <script src="./information/mapbox-gl-map.js"></script>
-        <link href="css/style.css" rel="stylesheet">
-    <style>
-        body, html {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                width: 100%;
-                display: flex;
-            }
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-        .logos{
-           /*position: absolute;
-            top: 10px;     
-            left: 10px;    
-            display: flex;
-            flex-direction: row;  
-            gap: 15px; */
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            align-items: center;
-            align-self: end;
-            padding: 20px;
-        }
-        .logos img{
-            width: 80px;
-            height: auto;
-            opacity: 0.8;
-        }
+<html lang="es">
 
-    </style>
-    
-    
-    
-    </head>
-    <body>
-        <div id="map"></div>
-        <div class="logos">
-            <img src="images/secretaria.png" alt="Logo 4" class="tam" style="width: 130px;">
-            <img src="images/coscyt.png" alt="Logo 3">
-            <img src="images/uabcs-logo.png" alt="Logo 1">
-            <img src="images/xplora.png" alt="Logo 2" style="width: 121px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BCSxplora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="destination-menu">
+
+        <video
+            id="background-video"
+            autoplay
+            muted
+            loop
+            playsinline
+        ></video>
+
+        <div class="overlay"></div>
+
+        <div class="brand-bar">
+            <div class="logo-group">
+                <div class="logo-circle"><img src="images/secretaria.png" alt="Logo de la Secretaría"></div>
+                <div class="logo-circle"><img src="images/xplora.png" alt="Logo de Xplora"></div>
+            </div>
+
+            <h1 class="project-name">BCSxplora</h1>
+
+            <div class="logo-group">
+                <div class="logo-circle"><img src="images/uabcs-logo.png" alt="Logo de UABCS"></div>
+                <div class="logo-circle"><img src="images/coscyt.png" alt="Logo de COSCYT"></div>
+            </div>
         </div>
-        
 
-        <script src="./information/aframe.min.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/config.js"></script>
-    </body>
+        <section class="menu-content">
+            <span class="location">Explora los paseos</span>
+            <div id="destination-grid" class="destination-grid" aria-live="polite"></div>
+        </section>
+
+    </main>
+
+    <script src="js/menu.js"></script>
+
+</body>
+
 </html>
